@@ -2,6 +2,7 @@
 
 int main()
 {
-    c_lib_fun();
+    htrk_discovery_ctx* ctx;
+    htrk_discovery_new(&ctx);
     return 0;
 }

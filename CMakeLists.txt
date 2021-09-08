@@ -105,10 +105,9 @@ add_library(htrk SHARED IMPORTED)
 add_dependencies(htrk htrkapi)
 
 set_target_properties(htrk PROPERTIES 
-                        IMPORTED_LOCATION ${htrk_cargo_build_dir}/release/libhtrkapi.dylib)
+                        IMPORTED_LOCATION ${htrk_cargo_build_dir}/release/libhtrkapi.a)
 
 file(MAKE_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/cargo/include")
-
 target_include_directories(htrk INTERFACE "${CMAKE_CURRENT_BINARY_DIR}/cargo/include")
 
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/test-c)
